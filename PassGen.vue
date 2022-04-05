@@ -61,6 +61,9 @@
                   <input class="passwordgen" type="text" :value="resultat"/>
                   <button class="copiepass" @click="doCopy">Copier</button>
               </div>
+              <div class="message">
+                  {{error}}
+              </div>
               
           </div>
       </div>
@@ -85,7 +88,8 @@ export default {
             tableauDeTableau: [],
             tableauChoisie: '',
             resultat : '',
-            codeACopier: ''
+            codeACopier: '',
+            error: ''
         }
     },
      methods : {
@@ -114,6 +118,7 @@ export default {
          genereMpd: function () {
              this.resultat = ''
              this.tableauDeTableau = []
+             this.error = ''
             // verifié quel selecteur est actif
 
             if(this.withNumber){
@@ -132,7 +137,7 @@ export default {
                 this.resultat = this.resultat + this.tableauChoisie[Math.floor(Math.random() * this.tableauChoisie.length)]
              }
             }else{
-                console.log('choisiez au moins un type de charactère')
+                this.error = 'choisiez au moins un type de charactère'
             }
              
          },
@@ -266,6 +271,9 @@ export default {
       border:none;
       font-size: 20px;
       cursor: pointer;
+  }
+  .message{
+      padding-top: 10px
   }
 
 </style>
