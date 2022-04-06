@@ -1,4 +1,4 @@
-<template>
+<<template>
   <div class="passgen">
       <div class="container">
           <div class="ttreContent">
@@ -180,6 +180,7 @@ export default {
  .selecteur_content.flex{
      display: flex;
      justify-content: space-between;
+     flex-wrap: wrap;
  }
  .selecteur{
      width: 120px;
@@ -274,6 +275,11 @@ export default {
   }
   .message{
       padding-top: 10px
+  }
+  @media screen and (max-width: 700px) {
+       .passwordgen{
+           font-size: 25px;
+       }
   }
 
 </style>
