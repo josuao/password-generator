@@ -1,4 +1,4 @@
-<<template>
+<template>
   <div class="passgen">
       <div class="container">
           <div class="ttreContent">
