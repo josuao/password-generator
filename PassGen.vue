@@ -137,7 +137,7 @@ export default {
                 this.resultat = this.resultat + this.tableauChoisie[Math.floor(Math.random() * this.tableauChoisie.length)]
              }
             }else{
-                this.error = 'choisiez au moins un type de charactère'
+                this.error = 'choisissez au moins un type de charactère'
             }
              
          },
